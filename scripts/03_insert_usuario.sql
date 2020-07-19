@@ -1,0 +1,1 @@
+INSERT INTO USUARIO (NM_USUARIO, EMAIL, SENHA) VALUES ('DBAMS', 'dbams@gmail.com', 'dbams');
