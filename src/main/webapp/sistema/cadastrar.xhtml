@@ -26,7 +26,7 @@
 	            		<p:inputText id="inputText-nome" 
 	            				  style="width:300px" 
 	            				  maxlength="100" 
-	            				  value="#{usuarioController.usuarioModel.nome}"
+	            				  value="#{cadastrarUsuarioController.usuarioModel.nome}"
 	            				  required="true"
 	            				  requiredMessage="O nome é de preenchimento obrigatório"/>
  
@@ -34,7 +34,7 @@
 	            		<p:inputText id="inputText-email" 
 	            			     style="width:300px" 
 	            			     maxlength="50" 
-	            			     value="#{usuarioController.usuarioModel.email}"
+	            			     value="#{cadastrarUsuarioController.usuarioModel.email}"
 	            			     required="true"
 	            			     requiredMessage="O e-mail é de preenchimento obrigatório"/>           		
  
@@ -48,7 +48,7 @@
 	            			     weakLabel="Força da senha: Fraca" 
 	            			     goodLabel="Força da senha: Média"
 	            			     strongLabel="Força da senha: Forte"
-	            			     value="#{usuarioController.usuarioModel.senha}"
+	            			     value="#{cadastrarUsuarioController.usuarioModel.senha}"
 	            			     required="true"
 	            		         requiredMessage="A senha é de preenchimento obrigatório"/>
  
@@ -57,7 +57,7 @@
 	            		<p:commandButton value="Salvar" 
 	            				 id="commandButton-salvar"
 						 icon="ui-icon-gear"
-						 actionListener="#{usuarioController.inserirUsuario}"
+						 actionListener="#{cadastrarUsuarioController.inserirUsuario}"
 						 update="panelGrid-campos-form"/>
  
 	 		 	</h:panelGrid>

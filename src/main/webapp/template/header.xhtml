@@ -7,13 +7,12 @@
 	<h:form>
  
 		<p:menubar>
-			<p:menuitem value="Home" icon="ui-icon-home" url="home.xhtml"/>
-			<p:menuitem value="Cadastro" icon="ui-icon-document" url="cadastrarUsuario.xhtml"/>
-			<p:menuitem value="Consulta" icon="ui-icon-document" />
+			<p:menuitem value="Cadastro" icon="ui-icon-document" url="cadastrar.xhtml"/>
+			<p:menuitem value="Consulta" icon="ui-icon-document" url="consultar.xhtml"/>
  
  
 			<f:facet name="options">            
-        		<p:commandButton value="Logout" icon="ui-icon-extlink" action="#{loginController.Logout}"/>
+        		<p:commandButton value="Logout" icon="ui-icon-extlink" action="#{loginController.logout}"/>
         	</f:facet>
 		</p:menubar>
  

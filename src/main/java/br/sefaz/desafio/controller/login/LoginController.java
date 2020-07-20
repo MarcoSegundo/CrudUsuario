@@ -12,7 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 import br.sefaz.desafio.model.UsuarioModel;
 import br.sefaz.desafio.repository.UsuarioRepository;
 import br.sefaz.desafio.entity.UsuarioEntity;
-import br.sefaz.desafio.utils.Utils;
+import br.sefaz.desafio.utils.MessageUtil;
 
 @Named(value="loginController")
 @SessionScoped
@@ -22,7 +22,7 @@ public class LoginController implements Serializable {
  
 	@Inject
 	private UsuarioModel usuarioModel;
- 
+	
 	@Inject
 	private UsuarioRepository usuarioRepository;
  
@@ -51,44 +51,42 @@ public class LoginController implements Serializable {
 	}
 	
 	public String efetuarLogin(){
- 
-		if(validarCamposLogin(usuarioModel.getNome(), usuarioModel.getSenha()))
-		{	
- 
-			usuarioEntity = usuarioRepository.validarUsuario(usuarioModel);
- 
+
+		if(validarCamposLogin(usuarioModel.getNome(), usuarioModel.getSenha())){
+		
+			usuarioEntity = usuarioRepository.validarUsuario(usuarioModel.getNome(), usuarioModel.getSenha());
+	 
 			if(usuarioEntity!= null){
- 
+	 
 				usuarioModel.setSenha(null);
 				usuarioModel.setCodigo(usuarioEntity.getCodigo());
- 
- 
+	 
 				FacesContext facesContext = FacesContext.getCurrentInstance();
- 
+	 
 				facesContext.getExternalContext().getSessionMap().put("usuarioAutenticado", usuarioModel);
- 
- 
-				return "sistema/home?faces-redirect=true";
+	  
+				return "sistema/consultar?faces-redirect=true";
 			}
 			else{
- 
-				Utils.Mensagem("Não foi possível efetuar o login com esse usuário e senha!");
+	 
+				MessageUtil.Mensagem("Não foi possível efetuar o login com esse usuário e senha!");
 				return null;
 			}
+		} else {
+			return null;
 		}
-		
-		return null;
+
 	}
 	
 	private boolean validarCamposLogin(String nome, String senha) {
 		if(StringUtils.isEmpty(nome) || StringUtils.isBlank(nome)){
 			 
-			Utils.Mensagem("Favor informar o login!");
+			MessageUtil.Mensagem("Favor informar o login!");
 			return false;
 		}
 		else if(StringUtils.isEmpty(senha) || StringUtils.isBlank(senha)){
  
-			Utils.Mensagem("Favor informara senha!");
+			MessageUtil.Mensagem("Favor informar a senha!");
 			return false;
 		}
 		
