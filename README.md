@@ -1,4 +1,3 @@
 CRUD de Usuários
 
-Necessário executar os scripts iniciais.
-
+A resolução do 'Desafio Analista' e os scripts iniciais do CRUD estão na pasta scripts.

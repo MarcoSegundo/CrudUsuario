@@ -28,7 +28,10 @@
           	    maxlength="50" 
           	    value="#{usuarioController.usuarioModel.email}"
           	    required="true"
-          	    requiredMessage="O e-mail é de preenchimento obrigatório"/> 
+          	    requiredMessage="O e-mail é de preenchimento obrigatório"
+          	    validatorMessage="O e-mail não é válido">
+	            	<f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
+        	</p:inputText> 
        	  	
        	  	<p:outputLabel value="Senha" for="inputText-senha"/>
 	        <p:password id="inputText-senha" 

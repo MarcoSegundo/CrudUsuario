@@ -1,0 +1,10 @@
+INSERT INTO USUARIO VALUES ('68330922065', 'Marli Priscila Francisca Araújo', 'marli.araujo@hotmail.com', 'MTIzNDU2Nzg=', 3, 3);
+INSERT INTO USUARIO VALUES ('33944528042', 'Lorenzo André Arthur Moraes', 'lorenzo.moraes@gmail.com', 'MTIzNDU2Nzg=', 2, 2);
+INSERT INTO USUARIO VALUES ('28658496007', 'Carla Nina Jennifer Pires', 'carla.pires@yahoo.com.br', 'MTIzNDU2Nzg=', 4, 1);
+INSERT INTO USUARIO VALUES ('09239510087', 'Breno Ruan Porto', 'breno.porto@gmail.com', 'MTIzNDU2Nzg=', 5, 4);
+INSERT INTO USUARIO VALUES ('40575315059', 'Marcos Vinicius Cauê Murilo da Luz', 'marcos.luz@gmail.com', 'MTIzNDU2Nzg=', 1, 1);
+INSERT INTO USUARIO VALUES ('62514902096', 'Danilo Davi Márcio Cardoso', 'danilo.cardoso@gmail.com', 'MTIzNDU2Nzg=', 1, 1);
+INSERT INTO USUARIO VALUES ('54326554037', 'Caleb Otávio Farias', 'caleb.farias@yahoo.com.br', 'MTIzNDU2Nzg=', 4, 1);
+INSERT INTO USUARIO VALUES ('23832902031', 'Juliana Carlota Barros', 'juliana.barros@gmail.com', 'MTIzNDU2Nzg=', 2, 2);
+INSERT INTO USUARIO VALUES ('01967116067', 'Daniela Josefa Laís Dias', 'daniela.dias@hotmail.com', 'MTIzNDU2Nzg=', 1, 1);
+INSERT INTO USUARIO VALUES ('54484877007', 'Priscila Isabela Gomes', 'priscila.gomes@hotmail.com', 'MTIzNDU2Nzg=', 5, 4);

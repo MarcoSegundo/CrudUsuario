@@ -1,6 +1,7 @@
 package br.sefaz.desafio.controller.login;
 
 import java.io.Serializable;
+import java.util.Base64;
 
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
@@ -54,7 +55,9 @@ public class LoginController implements Serializable {
 
 		if(validarCamposLogin(usuarioModel.getNome(), usuarioModel.getSenha())){
 		
-			usuarioEntity = usuarioRepository.validarUsuario(usuarioModel.getNome(), usuarioModel.getSenha());
+			String senhaEncoded = Base64.getEncoder().encodeToString(usuarioModel.getSenha().getBytes());
+			
+			usuarioEntity = usuarioRepository.validarUsuario(usuarioModel.getNome(), senhaEncoded);
 	 
 			if(usuarioEntity!= null){
 	 

@@ -1,5 +1,6 @@
 package br.sefaz.desafio.converter;
 
+import java.util.Base64;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -14,7 +15,10 @@ public class UsuarioConverter {
 		entity.setCodigo(model.getCodigo());
 		entity.setNome(model.getNome());
 		entity.setEmail(model.getEmail());
-		entity.setSenha(model.getSenha());
+
+		String senhaEncoded = Base64.getEncoder().encodeToString(model.getSenha().getBytes());
+		
+		entity.setSenha(senhaEncoded);
 		
 		return entity;
 	}
@@ -25,7 +29,11 @@ public class UsuarioConverter {
 		model.setCodigo(entity.getCodigo());
 		model.setNome(entity.getNome());
 		model.setEmail(entity.getEmail());
-		model.setSenha(entity.getSenha());
+		
+		byte[] senhaBytes = Base64.getDecoder().decode(entity.getSenha());
+		String decodedSenha = new String(senhaBytes);
+		
+		model.setSenha(decodedSenha);
 		
 		return model;
 	}
